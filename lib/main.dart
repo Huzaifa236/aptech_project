@@ -28,6 +28,7 @@ _init() async {
     Get.offAll(HomeScreen());
   } else {
     Get.offAll(Welcome());
+    print("hello world");
   }
 }
 
