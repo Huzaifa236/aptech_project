@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "408609390750",
+    "project_id": "aptech-project-16e8f",
+    "storage_bucket": "aptech-project-16e8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408609390750:android:a1517f019f50aa42cbfb8f",
+        "android_client_info": {
+          "package_name": "com.example.aptech_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408609390750-p6s8vdmrqna62d7o420lftnfna08a0fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm_7CTNCgCJLDVM2o1BRQ9M4Nxb4cIfXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408609390750-p6s8vdmrqna62d7o420lftnfna08a0fp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
