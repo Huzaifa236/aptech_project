@@ -64,11 +64,6 @@ class HomeScreen extends StatelessWidget {
             GestureDetector(
               onTap: ()
               {
-                // showDialog(
-                //     context: context,
-                //     builder: (builder){
-                //       return CircularProgressIndicator(color: kPurpleColor,);
-                //     });
                controller.logoutUser();
               },
               child: const ListTile(

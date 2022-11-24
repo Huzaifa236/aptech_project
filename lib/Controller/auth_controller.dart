@@ -1,3 +1,4 @@
+import 'package:aptech_project/Model/user_model.dart';
 import 'package:aptech_project/Screens/Auth/login_screen.dart';
 import 'package:aptech_project/Screens/Home.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -10,8 +11,10 @@ import '../Components/constants.dart';
 import '../Routes/routes.dart';
 
 class AuthController extends GetxController{
-
+   var isLoading = false;
   var isPasswordHiddin = true.obs;
+  var userlist = <UserModel> [];
+
   // register text editing controllers
   final TextEditingController RegisterEmailController = TextEditingController();
   final TextEditingController RegisterPasswordController = TextEditingController();
@@ -67,8 +70,20 @@ class AuthController extends GetxController{
     await _auth.signOut();
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.clear();
-    print("Cleared");
     Get.offAllNamed(RoutesClass.welcome);
   }
+  Future<void> getUser() async{
+    try{
+      QuerySnapshot users = await FirebaseFirestore.instance.collection('users').orderBy('email').get();
+      userlist.clear();
+      for(var user in users.docs)
+        {
+           userlist.add(UserModel(user['email']));
+        }
+    }catch(e){
+      Get.snackbar("Error", '${e.toString()}');
+    }
 
+
+  }
 }
