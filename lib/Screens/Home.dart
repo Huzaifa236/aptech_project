@@ -1,12 +1,26 @@
 import 'package:aptech_project/Components/constants.dart';
 import 'package:aptech_project/Components/size_config.dart';
+import 'package:aptech_project/Controller/bottom_navigation_controller.dart';
+import 'package:aptech_project/Screens/Home%20Screens/connect_device.dart';
+import 'package:aptech_project/Screens/Home%20Screens/home_calculate.dart';
+import 'package:aptech_project/Screens/Home%20Screens/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:get/get.dart';
 import '../Controller/auth_controller.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final screens = [
+      HomeCalculator(),
+      ConnectDevice(),
+      Profile(),
+    ];
+
+    BottomNavigationController bottomnavigationcontroller = Get.put(BottomNavigationController());
     AuthController controller = AuthController();
     var _key = GlobalKey<ScaffoldState>();
     return Scaffold(
@@ -159,7 +173,25 @@ class HomeScreen extends StatelessWidget {
            ),
          ),
        ],
-     ) ,
+     ),
+      body: Obx(() => IndexedStack(
+        children: screens,
+        index: bottomnavigationcontroller.selectedIndex.value,
+        ),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: kPurpleLightColor,
+        color: kPurpleColor,
+        height: 70,
+        onTap: (value){
+          bottomnavigationcontroller.changeIndex(value);
+        },
+        items: [
+          Icon(Icons.home_rounded,color: Colors.white,),
+          Icon(Icons.connected_tv_rounded,color: Colors.white,),
+          Icon(Icons.person_rounded,color: Colors.white,),
+        ],
+      ),
     );
   }
 }

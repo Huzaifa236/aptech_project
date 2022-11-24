@@ -7,9 +7,8 @@ class ConnectDevice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          Text("ConnectDevice"),
+          Text("ConnectDevice",style: TextStyle(fontSize: 30),),
         ],
       ),
     );
