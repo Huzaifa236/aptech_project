@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Routes/routes.dart';
-import 'Screens/Auth/login_screen.dart';
 
 
 

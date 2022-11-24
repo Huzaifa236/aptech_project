@@ -34,9 +34,8 @@ class AuthController extends GetxController{
       firestore.collection('users').doc(user.user!.uid).set(
           {"email": RegisterEmailController.text.trim(), "password": RegisterPasswordController.text.trim()});
       if (user != null) {
-        print("Logged in");
+        Get.snackbar("Success", "Account created successfully");
         Get.toNamed(RoutesClass.getLoginRoute());
-
       } else {
         print('error');
       }
@@ -57,8 +56,8 @@ class AuthController extends GetxController{
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString("userID", user.user!.uid);
       print(user.user!.uid);
+      Get.snackbar("Success", "Logged In Successfully");
       Get.toNamed(RoutesClass.getHomeRoute());
-
     } else {
       Get.snackbar("Fields Empty", "Fill all Fields");
     }
@@ -70,6 +69,7 @@ class AuthController extends GetxController{
     await _auth.signOut();
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.clear();
+    Get.snackbar("Success", "Logged Out Successfully");
     Get.offAllNamed(RoutesClass.welcome);
   }
   Future<void> getUser() async{
