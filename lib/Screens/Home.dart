@@ -182,7 +182,7 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: kPurpleLightColor,
         color: kPurpleColor,
-        animationDuration: Duration(milliseconds: 1000),
+        animationDuration: Duration(milliseconds: 10),
         height: 70,
         onTap: (value){
           bottomnavigationcontroller.changeIndex(value);
