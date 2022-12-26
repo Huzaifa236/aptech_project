@@ -87,6 +87,7 @@ class Welcome extends StatelessWidget {
                 const Text("A Laser Distance Meter send 0 pulse of laser light to the target\n"
                     "and measure the time it takes for the reflection to return",
                   style: TextStyle(
+                    color: Colors.orange,
                     fontSize: 12,
                     fontWeight: FontWeight.w200,
                   ),
@@ -101,7 +102,7 @@ class Welcome extends StatelessWidget {
                     }
                     ),
                     SizedBox(width: SizeConfig.screenWidth*0.12),
-                   BorderButton(text: "Login",
+                   BorderButton(text: "Login"?,
                    press: (){
                      Get.toNamed(RoutesClass.getLoginRoute());
                    }),
