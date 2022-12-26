@@ -1,7 +1,7 @@
 import 'package:aptech_project/Components/constants.dart';
 import 'package:aptech_project/Components/size_config.dart';
 import 'package:aptech_project/Controller/bottom_navigation_controller.dart';
-import 'package:aptech_project/Screens/Home%20Screens/connect_device.dart';
+import 'package:aptech_project/Screens/Home%20Screens/calculate_sides.dart';
 import 'package:aptech_project/Screens/Home%20Screens/home_calculate.dart';
 import 'package:aptech_project/Screens/Home%20Screens/profile.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screens = [
       HomeCalculator(),
-      ConnectDevice(),
+      Calculation(),
       Profile(),
     ];
 

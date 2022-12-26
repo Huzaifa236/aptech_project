@@ -102,7 +102,7 @@ class Welcome extends StatelessWidget {
                     }
                     ),
                     SizedBox(width: SizeConfig.screenWidth*0.12),
-                   BorderButton(text: "Login"?,
+                   BorderButton(text: "Login",
                    press: (){
                      Get.toNamed(RoutesClass.getLoginRoute());
                    }),
