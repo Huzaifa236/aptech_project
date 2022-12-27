@@ -13,7 +13,7 @@ class HomeCalculator extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: SizeConfig.screenHeight*0.040,),
-          Center(child: Text("Simple Calculation",style: TextStyle(fontSize: 30,color: kPurpleColor),)),
+          const Center(child: Text("Simple Calculation",style: TextStyle(fontSize: 30,color: kPurpleColor),)),
           SizedBox(height: SizeConfig.screenHeight*0.040,),
           Container(
             decoration: const BoxDecoration(
@@ -31,14 +31,14 @@ class HomeCalculator extends StatelessWidget {
             width: SizeConfig.screenWidth*0.500,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.add_box,color: Colors.white,),
                 Text("Start",style: TextStyle(
                 color: Colors.white,
                 fontSize: 30,
                 ),
                 ),
-                Text("Measurment",style: TextStyle(
+                Text("Measurement",style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
                 ),

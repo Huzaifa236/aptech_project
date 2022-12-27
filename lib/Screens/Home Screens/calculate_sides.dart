@@ -1,6 +1,7 @@
+import 'package:aptech_project/Components/buttons.dart';
 import 'package:aptech_project/Components/form_fields.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../../Components/size_config.dart';
 import '../../Controller/side_controller.dart';
 
@@ -11,7 +12,7 @@ class Calculation extends StatelessWidget {
   Widget build(BuildContext context) {
     SideController sideController = SideController();
     return Scaffold(
-      body: Column(
+      body: Obx(() => Column(
         children: [
           SizedBox(
             height: SizeConfig.screenHeight*0.020,
@@ -42,8 +43,19 @@ class Calculation extends StatelessWidget {
           ReusableTextField(
               labelText: "Side D",
               controller: sideController.SideDController),
+          SizedBox(
+            height: SizeConfig.screenHeight*0.010,
+          ),
+          BorderButton(text: "Calculate",press: (){
+            sideController.calculateheight();
+          }),
+
+
+          Text("${sideController.area}"),
+
+
         ],
-      ),
+      )),
     );
   }
 }
