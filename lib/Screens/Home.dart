@@ -115,33 +115,33 @@ class HomeScreen extends StatelessWidget {
      appBar:AppBar(
        shadowColor: Colors.transparent,
        backgroundColor: Colors.white,
-       leading: Padding(
-         padding: const EdgeInsets.all(8.0),
-         child: Container(
-           height: 40,
-           width: 40,
-           decoration: BoxDecoration(
-             boxShadow: const <BoxShadow>[
-               BoxShadow(
-                   color: Colors.black54,
-                   blurRadius: 15,
-                   offset: Offset(-5, 5)
-               )
-             ],
-             color: kPurpleColor,
-             border: const Border(),
-             borderRadius: BorderRadius.circular(10),
-           ),
-           child: IconButton(
-             style: IconButton.styleFrom(
-               backgroundColor: kPurpleColor,
-             ),
-             onPressed: (){
-             },
-             icon: const Icon(Icons.list_outlined,color: Colors.white),
-           ),
-         ),
-       ),
+       // leading: Padding(
+       //   padding: const EdgeInsets.all(8.0),
+       //   child: Container(
+       //     height: 40,
+       //     width: 40,
+       //     decoration: BoxDecoration(
+       //       boxShadow: const <BoxShadow>[
+       //         BoxShadow(
+       //             color: Colors.black54,
+       //             blurRadius: 15,
+       //             offset: Offset(-5, 5)
+       //         )
+       //       ],
+       //       color: kPurpleColor,
+       //       border: const Border(),
+       //       borderRadius: BorderRadius.circular(10),
+       //     ),
+       //     child: IconButton(
+       //       style: IconButton.styleFrom(
+       //         backgroundColor: kPurpleColor,
+       //       ),
+       //       onPressed: (){
+       //       },
+       //       icon: const Icon(Icons.list_outlined,color: Colors.white),
+       //     ),
+       //   ),
+       // ),
         flexibleSpace: SafeArea(child: Image(image: const AssetImage('assets/images/logo.png'),width: SizeConfig.screenWidth*0.15)),
        actions: [
          Padding(

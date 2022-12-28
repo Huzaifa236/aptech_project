@@ -18,7 +18,7 @@ class ReusableTextField extends StatelessWidget {
     return Padding(
       padding:  EdgeInsets.all(8.0),
       child: TextFormField(
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: TextInputType.text,
         controller: controller,
         decoration: InputDecoration(
           labelText: labelText,
